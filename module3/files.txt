@@ -1,0 +1,108 @@
+Module – 3 (Collections, functions and Modules):-
+-------------------------------------------------- 
+ 
+1)What is List? How will you reverse a list?  
+Ans:-list is a collection type which is  used to store multiple items in a single virable  
+     List is a mutable data type in which we can chanage,add or modify the items 
+     symbole of list is []
+     list is inmutable
+     Reversing a List. Python provides us with various ways of reversing a list. We will go through few of the many techniques on how a        list in python can be reversed.
+Examples: Method 1: Using the reversed() built-in function. In this method, we neither reverse a list in-place(modify the original list),   nor we create any copy of the list.
+
+2)How will you remove last object from a list?  
+  Suppose list1 is [2, 33, 222, 14, and 25], what is list1 [-1]? 
+ 
+3)Differentiate between append () and extend () methods?  
+Ans:- append():It adds an element at the end of the list. The argument passed in the append function is added as a single element at end of the list and the length of the list is increased by 1.
+      syntax:-
+      -------
+        list_name.append(element)
+        The element can be a string, integer, tuple, or another list.
+       
+      - extend():This method appends each element of the iterable (tuple, string, or list) to the end of the list and increases the length                                          of the list by the number of elements of the iterable passed as an argument.
+
+        Syntax:-
+        --------
+         list_name.extend(iterable)
+
+5)How will you compare two lists? 
+Ans:- Then, we can compare the two lists. For comparison,first we will check if the length of the lists are equal or not. If the lengths are not equal, the lists will be automatically considered as different. If the length of the lists are the same, we will sort the two lists.
+
+17)What is tuple? Difference between list and tuple.
+Ans:-A tuple is a collection of objects which ordered and immutable. Tuples are sequences, just like lists and the tuples cannot be changed unlike lists
+
+List:Lists are mutable
+     The implication of iterations is Time-consuming     
+     The list is better for performing operations, such as insertion and deletion. 
+     Lists consume more memory
+     Lists have several built-in methods
+     The unexpected changes and errors are more likely to occur
+
+Tuple:Tuples are immutable
+      The implication of iterations is comparatively Faster 
+      Tuple data type is appropriate for accessing the elements
+      Tuple consumes less memory as compared to the list
+      Tuple does not have many built-in methods.
+      In tuple, it is hard to take place.
+31) How will you create a dictionary using tuples in python?
+Ans:-To create a dictionary using tuples in Python, you can use the dict() constructor or the curly braces {} notation. Each key-value pair in the dictionary will be represented by a tuple.
+Here are two approaches to create a dictionary using tuples:
+
+Using dict() constructor:
+
+35)  How Do You Traverse Through A Dictionary Object In Python?
+Ans:-To iterate through a dictionary in Python, there are four main approaches you can use: create a for loop, use items () to iterate through a dictionary’s key-value pairs, use keys () to iterate through a dictionary’s keys, or use values () to iterate through a dictionary’s values.
+
+36)  How Do You Check The Presence Of A Key In A Dictionary?
+Ans:-The key does not exist in the dictionary. Python get () method can be used to check whether a particular key is present in the key-value pairs of the dictionary. The get () method actually returns the value associated with the key if the key happens to be present in the dictionary, else it returns ‘ None ‘.
+
+43)  Why Do You Use the Zip () Method in Python?
+Ans:-The zip () method takes one or more iterables (such as list, tuple, string, etc.) and constructs the iterator of tuples where each tuple contains elements from each iterable.
+-It can be used to sort a list of items based on elements in their corresponding positions in the other list. It can be used to perform operations in pairs. There are several other uses as well. For example, you can use the zip method to map the marks of a student along with their names.
+
+50) How Many Basic Types Of Functions Are Available In Python?
+Ans:-Built-in Functions: These are functions that are built into the Python language and can be used directly. Examples include print(), len(), type(), range(), etc.
+
+-User-defined Functions: These are functions defined by the user to perform specific tasks. You can create your own functions using the def keyword.
+
+-Lambda Functions (Anonymous Functions): These are small, anonymous functions that can be defined using the lambda keyword. They are typically used when you need a simple function for a short period of time.
+
+-Recursive Functions: These are functions that call themselves within their own definition. They are used to solve problems that can be broken down into smaller, repetitive tasks.
+
+-Higher-order Functions: These are functions that take one or more functions as arguments or return a function as a result. They are used for tasks such as function composition, mapping, filtering, etc.
+
+-Generator Functions: These are functions that use the yield keyword instead of return to generate a sequence of values. They allow for efficient iteration over large or infinite sequences.
+
+-Decorator Functions: These are functions that modify the behavior of other functions without directly changing their code. Decorators are usually used to add functionality to existing functions.
+
+-These are some of the basic types of functions available in Python. Each type serves different purposes and can be used in various scenarios based on your programming needs
+
+51) How can you pick a random item from a list or tuple?
+Ans:-The tuple is another popular type used in Python. We can use the random.choise () and random.choices () method to select a random item from the given tuple
+
+52) How can you pick a random item from a range?
+Ans:-Selecting random numbers from a list can be used sometimes while building games, choosing a random range, etc. This random.choice () function is designed for getting a Random sampling from a list in Python and hence is the most common method to achieve this task of fetching a random number from a list
+
+53) How can you get a random number in python?
+Ans:-To understand this example, you should have the knowledge of the following Python programming topics: To generate random number in Python, randint () function is used. This function is defined in random module. Note that we may get different output because this program generates random number in range 0 and 9. The syntax of this function is:import random
+print(random.randint(0,9))
+
+54) How will you set the starting value in generating random numbers?
+Ans:-Python defines a set of functions that are used to generate or manipulate random numbers through the random module. 
+-Functions in the random module rely on a pseudo-random number generator function random(), which generates a random float number between 0.0 and 1.0. These particular type of functions is used in a lot of games, lotteries, or any application requiring a random number generation.
+-Let us see an example of generating a random number in Python using the random() function.
+Example:-
+--------
+import random
+num = random.random()
+print(num)
+
+55) How will you randomizes the items of a list in place?
+Ans:-The random module in the Python standard library provides a shuffle () function that returns a sequence with its elements randomly placed.
+Example:-
+--------
+import random
+a_list = ['welcome', 'to', 'datagy', 'where', 'you', 'will', 'learn', 'Python', 'and', 'more']
+random.shuffle(a_list)
+print(a_list)
+# Returns: ['more', 'will', 'Python', 'welcome', 'learn', 'you', 'where', 'to', 'datagy', 'and']
