@@ -1,0 +1,213 @@
+Module – 4 (Advance python programming):-
+---------------------------------------------
+
+1)What is File function in python? What is keywords to create and write file.
+Ans:-One of its wonders handling and organization of files which would save a lot of time for us. A wide range of functions in Python is capable to cater the need of file operations such as opening, reading, writing, creating files et cetera.To create a new file in Python, use the open () method, with one of the following parameters: "x" - Create - will create a file, returns an error if the file exist "a" - Append - will create a file if the specified file does not exist "w" - Write - will create a file if the specified file does not exist
+
+13)Explain Exception handling? What is an Error in Python?
+Ans:-Exception handling is a mechanism in Python to handle and manage errors or exceptional situations that may occur during program execution. When an error occurs, it raises an exception, which is an object representing the error. You can use try-except blocks to catch and handle exceptions, allowing the program to gracefully recover from errors.
+
+In Python, an error refers to a problem or issue that prevents the program from executing correctly. It can be caused by various factors, such as invalid input, incorrect syntax, or runtime issues. When an error occurs, it halts the program's execution and raises an exception, indicating the specific type of error encountered. Python provides built-in error types like ValueError, TypeError, and ZeroDivisionError to handle common error scenarios, and you can also create custom error classes.
+
+14)How many except statements can a try-except block have? Name Some built-in exception classes:
+Ans:-A try-except block in Python can have multiple except statements to handle different types of exceptions. Each except statement specifies the type of exception it can handle.
+here is example:-
+----------------
+try:
+    # Code that may raise exceptions
+    # ...
+except ValueError:
+    # Exception handler for ValueError
+    # ...
+except TypeError:
+    # Exception handler for TypeError
+    # ...
+except ZeroDivisionError:
+    # Exception handler for ZeroDivisionError
+    # ...
+:-As for some built-in exception classes in Python, here are a few examples:
+
+1)ValueError: Raised when a function receives an argument of the correct type but an inappropriate value.
+2)TypeError: Raised when an operation or function is applied to an object of an inappropriate type.
+3)ZeroDivisionError: Raised when dividing a number by zero.
+4)FileNotFoundError: Raised when trying to access a file that doesn't exist.
+5)IndexError: Raised when trying to access a list or sequence with an invalid index.
+6)KeyError: Raised when trying to access a dictionary with a key that doesn't exist.
+7)AttributeError: Raised when trying to access an attribute that doesn't exist on an object.
+8)IOError: Raised when an input/output operation fails.
+
+15)When will the else part of try-except-else be executed?
+Ans:-The else part of a try-except-else block in Python will be executed only if no exception occurs within the preceding try block. It provides a way to specify code that should be executed only when the try block completes successfully, without any exceptions being raised.
+
+16)Can one block of except statements handle multiple exception?
+Ans:-Yes, a single block of except statements in Python can handle multiple exceptions. You can specify multiple exception types within a single except block by enclosing them in parentheses and separating them with commas.
+
+17)When is the finally block executed?
+Ans:-The finally block in Python is executed regardless of whether an exception occurs or not. It provides a way to define cleanup code that should be executed no matter what happens within the try block.
+
+The finally block is typically used to release resources, close files, or perform any necessary cleanup operations that should be executed regardless of exceptions. It ensures that the code within the finally block is always executed, even if an exception is raised and not caught by any except block.
+
+18)What happens when „1‟== 1 is executed?
+Ans:-In the specific example "1" == 1, the string "1" and the integer 1 are not equal. The string "1" represents the character "1", while the integer 1 represents the numeric value 1. Since they have different values and types, the expression evaluates to False.
+
+19)How Do You Handle Exceptions With Try/Except/Finally In Python?Explain with coding snippets.
+Ans:-you can handle exceptions using the try, except, and finally statements. The try block is used to enclose the code that might raise an exception, and the except block is used to handle specific types of exceptions. The finally block is optional and is used to define code that should be executed regardless of whether an exception occurred or not
+example with  code:-
+-------------------
+1.)Handling a specific exception.
+
+try:
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter another number: "))
+    result = num1 / num2
+    print("Result:", result)
+
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+print("Program continues...")
+
+2.)Handling multiple exceptions:
+try:
+  
+    file = open("nonexistent_file.txt", "r")
+    num = int(input("Enter a number: "))
+    result = 100 / num
+    print("Result:", result)
+
+except FileNotFoundError:
+    print("Error: File not found.")
+
+except ValueError:
+
+    print("Error: Invalid input. Please enter a valid number.")
+
+print("Program continues...")
+
+3.)Using the finally block:
+try:
+    
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter another number: "))
+    result = num1 / num2
+    print("Result:", result)
+
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+finally:
+    print("Finally block executed.")
+
+print("Program continues...")
+
+
+
+21)What are oops concepts? Is multiple inheritance supported in java
+Ans:-
+
+22)How to Define a Class in Python? What Is Self? Give An Example Of A Python Class
+Ans:-To define a class in Python, you use the class keyword followed by the name of the class. 
+syntax:
+-------
+class ClassName:
+    # Class attributes and methods
+ Within a class, you can define attributes (variables) and methods (functions) that describe the behavior and properties of objects created from the class.
+ In Python, the self keyword is used as a reference to the current instance of the class. It is the first parameter in class methods, and it allows you to access the attributes and methods     of that instance.  
+example:-
+--------
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def greet(self):
+        print(f"Hello, my name is {self.name} and I'm {self.age} years old.")
+
+# Creating an instance of the Person class
+person = Person("John", 25)
+
+# Accessing instance attributes
+print(person.name)  # Output: John
+print(person.age)   # Output: 25
+
+# Calling an instance method
+person.greet()      # Output: Hello, my name is John and I'm 25 years old.
+
+
+
+26)Explain Inheritance in Python with an example? What is init? Or What Is A Constructor In Python?
+Ans:-Inheritance is a fundamental concept in object-oriented programming that allows you to create a new class (subclass) by deriving attributes and methods from an existing class (superclass). The subclass inherits the characteristics of the superclass, which promotes code reuse and supports the concept of hierarchical relationships between classes.
+example:-
+--------
+class Shape:
+    def __init__(self, color):
+        self.color = color
+    
+    def area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, color, width, height):
+        super().__init__(color)
+        self.width = width
+        self.height = height
+    
+    def area(self):
+        return self.width * self.height
+
+class Circle(Shape):
+    def __init__(self, color, radius):
+        super().__init__(color)
+        self.radius = radius
+    
+    def area(self):
+        return 3.14 * self.radius**2
+
+# Creating instances of the Rectangle and Circle classes
+rectangle = Rectangle("red", 5, 3)
+circle = Circle("blue", 2)
+
+# Accessing attributes and calling methods
+print(rectangle.color)    # Output: red
+print(rectangle.area())   # Output: 15
+
+print(circle.color)       # Output: blue
+print(circle.area())      # Output: 12.56
+
+In Python, __init__() is a special method known as a constructor. It is automatically called when an object is created from a class. The purpose of the constructor is to initialize the attributes of the object.
+
+Here's a brief explanation of the constructor in Python:
+
+Constructor Method: The __init__() method is defined within a class and has the name __init__ (double underscores followed by "init" and double underscores again). It takes the self parameter as the first parameter, followed by any additional parameters you want to pass to initialize the object.
+
+Initialization: The __init__() method is responsible for initializing the attributes of an object. It assigns values to the object's attributes based on the provided parameters or default values.
+
+Automatic Invocation: When you create an object from a class, the constructor is automatically called. It is executed as part of the object creation process.
+
+
+27)What is Instantiation in terms of OOP terminology?
+Ans:-In object-oriented programming (OOP), instantiation refers to the process of creating an instance or object of a class. It involves invoking the class constructor to allocate memory and initialize the attributes and methods defined within the class.
+
+In Python, the process of instantiation involves calling the class name as if it were a function, along with any required arguments, to create a new instance of the class. This invokes the class constructor (__init__ method) and returns the created object.
+
+28)What is used to check whether an object o is an instance of class A?
+Ans:-you can use the isinstance() function to check whether an object o is an instance of a particular class A. The isinstance() function takes two arguments: the object you want to check and the class you want to check against.
+
+Here's the syntax for using isinstance():
+isinstance(o, A)
+
+
+29)What relationship is appropriate for Course and Faculty?
+Ans:- the relationship between a Course and a Faculty can be modeled using an association or composition relationship, depending on the specific requirements of your program.
+
+Association Relationship:
+In an association relationship, a Course and a Faculty are connected, but they can exist independently of each other. This relationship typically represents a looser coupling between the two entities. For example, a Course can have a reference to the Faculty who teaches it, but the Faculty can teach multiple courses or even be unassociated with any course.
+
+
+30)What relationship is appropriate for Student and Person?
+Ans:-the appropriate relationship between a Student and a Person can be modeled using an inheritance relationship, where Student is a subclass of Person. This relationship represents an "is-a" relationship, implying that a Student is a specific type of Person
+
+
+
+
+
